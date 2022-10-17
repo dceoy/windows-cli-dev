@@ -74,10 +74,12 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "commandline": "C:\\Users\\dnars\\AppData\\Local\\Programs\\git-sdk-64\\usr\\bin\\zsh.exe -li",
+                "guid": "{579fbdcf-0ee0-44a8-bcf4-e3ac718c863d}",
                 "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
+                "icon": "C:\\Users\\dnars\\AppData\\Local\\Programs\\git-sdk-64\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Zsh",
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },
