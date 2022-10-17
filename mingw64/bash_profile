@@ -1,1 +1,0 @@
-zsh --version && exec zsh -l || :
