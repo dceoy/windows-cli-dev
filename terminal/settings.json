@@ -58,7 +58,7 @@
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "hidden": false,
+                "hidden": true,
                 "name": "\u30b3\u30de\u30f3\u30c9 \u30d7\u30ed\u30f3\u30d7\u30c8"
             },
             {
@@ -69,16 +69,16 @@
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "commandline": "C:\\Users\\dnars\\AppData\\Local\\Programs\\git-sdk-64\\usr\\bin\\zsh.exe -li",
+                "commandline": "D:\\git-sdk-64\\msys2_shell.cmd -mingw64 -defterm -no-start -here -full-path -shell zsh",
                 "guid": "{579fbdcf-0ee0-44a8-bcf4-e3ac718c863d}",
                 "hidden": false,
-                "icon": "C:\\Users\\dnars\\AppData\\Local\\Programs\\git-sdk-64\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Zsh",
+                "icon": "D:\\git-sdk-64\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Zsh",
                 "startingDirectory": "%USERPROFILE%"
             }
         ]
