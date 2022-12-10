@@ -103,8 +103,8 @@ else
 fi
 python -m pip install -U --no-cache-dir \
   ansible ansible-lint autopep8 aws-parallelcluster boto3 csvkit cfn-lint \
-  docopt flake8 flake8-bugbear flake8-isort grip ipython luigi pep8-naming \
-  vim-vint vulture yamllint yq
+  docopt flake8 flake8-bugbear flake8-isort git-remote-codecommit grip \
+  ipython luigi pep8-naming vim-vint vulture yamllint yq
 python -m pip install -U --no-cache-dir \
   bash_kernel docker-compose ggplot jupyter jupyter_contrib_nbextensions \
   jupyterthemes pandas psutil pynvim scikit-learn scipy seaborn \
