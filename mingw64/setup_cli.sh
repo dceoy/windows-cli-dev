@@ -12,9 +12,10 @@ pacman -S --noconfirm --needed \
   mingw-w64-x86_64-python-greenlet mingw-w64-x86_64-python-pandas \
   mingw-w64-x86_64-python-psutil mingw-w64-x86_64-python-ruamel.yaml.clib \
   mingw-w64-x86_64-python-scikit-learn mingw-w64-x86_64-python-scipy \
-  mingw-w64-x86_64-python-seaborn mingw-w64-x86_64-python-statsmodels \
-  mingw-w64-x86_64-ruby mingw-w64-x86_64-toolchain msys2-devel ncurses-devel \
-  sed time tmux tree unzip wget zip zsh
+  mingw-w64-x86_64-python-seaborn mingw-w64-x86_64-python-sqlalchemy \
+  mingw-w64-x86_64-python-statsmodels mingw-w64-x86_64-ruby \
+  mingw-w64-x86_64-toolchain msys2-devel ncurses-devel sed time tmux tree \
+  unzip wget zip zsh
 pacman -Scc --noconfirm
 
 git config --global core.autocrlf false
