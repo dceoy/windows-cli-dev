@@ -6,19 +6,21 @@ WD="${PWD}"
 
 pacman -Syyuu --noconfirm
 pacman -S --noconfirm --needed \
-  autotools base-devel colordiff curl dos2unix file gawk gettext-devel git \
-  libcrypt-devel libiconv-devel mingw-w64-x86_64-go mingw-w64-x86_64-jq \
-  mingw-w64-x86_64-nodejs mingw-w64-x86_64-python-cryptography \
+  colordiff mingw-w64-x86_64-7zip mingw-w64-x86_64-autotools \
+  mingw-w64-x86_64-cmake mingw-w64-x86_64-curl mingw-w64-x86_64-file \
+  mingw-w64-x86_64-go mingw-w64-x86_64-jq mingw-w64-x86_64-nodejs \
+  mingw-w64-x86_64-perl mingw-w64-x86_64-python-cryptography \
   mingw-w64-x86_64-python-greenlet mingw-w64-x86_64-python-pandas \
   mingw-w64-x86_64-python-psutil mingw-w64-x86_64-python-ruamel.yaml.clib \
   mingw-w64-x86_64-python-scikit-learn mingw-w64-x86_64-python-scipy \
   mingw-w64-x86_64-python-seaborn mingw-w64-x86_64-python-sqlalchemy \
   mingw-w64-x86_64-python-statsmodels mingw-w64-x86_64-ruby \
-  mingw-w64-x86_64-toolchain msys2-devel ncurses-devel sed time tmux tree \
-  unzip wget zip zsh
-pacman -Scc --noconfirm
+  mingw-w64-x86_64-sed mingw-w64-x86_64-toolchain mingw-w64-x86_64-tzdata \
+  mingw-w64-x86_64-wget2 ncurses-devel time tmux tree zsh
+pacman -Sc --noconfirm
 
 git config --global core.autocrlf false
+[[ -d '/usr/local/bin' ]] || mkdir -p /usr/local/bin
 [[ -d '/usr/local/src' ]] || mkdir -p /usr/local/src
 
 if [[ -d '/usr/local/src/print-github-tags' ]]; then
@@ -105,12 +107,13 @@ fi
 python -m pip install -U --no-cache-dir \
   ansible ansible-lint autopep8 aws-parallelcluster boto3 csvkit cfn-lint \
   docopt flake8 flake8-bugbear flake8-isort git-remote-codecommit grip \
-  ipython luigi pep8-naming vim-vint vulture yamllint yq
+  ipython luigi pep8-naming polars vim-vint vulture yamllint yq
 python -m pip install -U --no-cache-dir \
   bash_kernel docker-compose ggplot jupyter jupyter_contrib_nbextensions \
   jupyterthemes pandas psutil pynvim scikit-learn scipy seaborn \
   sklearn-pandas sktime statsmodels tqdm || :
 
-gem install sqlint statelint
+gem install sqlint statelint || :
 
-npm install -g jsonlint ajv-cli || :
+# npm -g config set proxy "${HTTP_PROXY}"
+npm -g install jsonlint ajv-cli || :
