@@ -10,8 +10,8 @@ pacman -S --noconfirm --needed \
   mingw-w64-x86_64-cmake mingw-w64-x86_64-curl mingw-w64-x86_64-file \
   mingw-w64-x86_64-go mingw-w64-x86_64-jq mingw-w64-x86_64-nodejs \
   mingw-w64-x86_64-perl mingw-w64-x86_64-python-cryptography \
-  mingw-w64-x86_64-python-greenlet mingw-w64-x86_64-python-pandas \
-  mingw-w64-x86_64-python-psutil mingw-w64-x86_64-python-ruamel.yaml.clib \
+  mingw-w64-x86_64-python-greenlet mingw-w64-x86_64-python-jupyter_notebook \
+  mingw-w64-x86_64-python-pandas mingw-w64-x86_64-python-psutil \
   mingw-w64-x86_64-python-scikit-learn mingw-w64-x86_64-python-scipy \
   mingw-w64-x86_64-python-seaborn mingw-w64-x86_64-python-sqlalchemy \
   mingw-w64-x86_64-python-statsmodels mingw-w64-x86_64-ruby \
@@ -105,13 +105,10 @@ else
   rm -f /tmp/get-pip.py
 fi
 python -m pip install -U --no-cache-dir \
-  ansible ansible-lint autopep8 aws-parallelcluster boto3 csvkit cfn-lint \
-  docopt flake8 flake8-bugbear flake8-isort git-remote-codecommit grip \
-  ipython luigi pep8-naming polars vim-vint vulture yamllint yq
-python -m pip install -U --no-cache-dir \
-  bash_kernel docker-compose ggplot jupyter jupyter_contrib_nbextensions \
-  jupyterthemes pandas psutil pynvim scikit-learn scipy seaborn \
-  sklearn-pandas sktime statsmodels tqdm || :
+  ansible ansible-lint autopep8 aws-parallelcluster bash_kernel boto3 csvkit \
+  cfn-lint docopt flake8 flake8-bugbear flake8-isort ggplot \
+  git-remote-codecommit grip jupyterlab jupyterthemes luigi pep8-naming plotly \
+  polars pynvim sklearn-pandas tqdm vim-vint vulture yamllint yq
 
 gem install sqlint statelint || :
 
