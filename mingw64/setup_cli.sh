@@ -113,4 +113,4 @@ python -m pip install -U --no-cache-dir \
 gem install sqlint statelint || :
 
 # npm -g config set proxy "${HTTP_PROXY}"
-npm -g install jsonlint ajv-cli || :
+npm -g install ajv-cli jsonlint npx typescript yarn || :
