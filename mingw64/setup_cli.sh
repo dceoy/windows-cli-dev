@@ -113,4 +113,5 @@ python -m pip install -U --no-cache-dir \
 gem install sqlint statelint || :
 
 # npm -g config set proxy "${HTTP_PROXY}"
-npm -g install ajv-cli jsonlint npx typescript yarn || :
+npm -g install ajv-cli eslint eslint-config-airbnb eslint-plugin-import \
+  jsonlint npx  typescript yarn || :
